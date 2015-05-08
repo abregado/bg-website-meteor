@@ -1,0 +1,539 @@
+@backcolor: #1c1c1c;
+@darkback: #111;
+@darkhov: #151515;
+@panelblue: ##D9CFE8;
+@stripe2: #B29FCC;
+@icon: #8CEA43;
+@artlink: #4B0DA1;
+@navcolor: #0F1700;
+@logo2: #8CEA43;
+@logo1: white;
+@fontcolor: #390A7C;
+@arthover:#390A7C;
+@stripe1: #D9CFE8;
+@brightfont:white;
+
+html,body {
+    background-color:@backcolor; /* BACKGROUND COLOR */
+    color:@fontcolor; /* UNSTYLED FONT COLOR */
+    padding:0;
+    font-family: 'Helvetica','Lora','Roboto', sans-serif;
+    letter-spacing: 1px; 
+}
+
+@media  (min-width: 60em) {
+	div#content {
+		max-width: 60em;
+		margin: 0 auto;
+		padding: 0;
+		display:block;
+	}
+	
+	article {
+		margin: 1em;
+		padding: 1em;
+		width: 16em;
+		height: 16em;
+	}
+    
+    article.calendar {
+        width:58em;
+    }
+    
+	article.width3 {
+		width: 56em;
+	}
+	
+    h1.extra-pad {
+        display:block;
+        font-size:2.5em;
+    }
+    
+	fieldset {
+		width: 56em;
+	}
+	article.width2 {
+		width: 36em;
+	}
+    
+    article.tablet {
+        display:none;
+    }
+    
+    article.img {
+    margin-top:1em;
+    
+}
+}
+@media (min-width: 40em) and (max-width: 59em) {
+	div#content {
+		max-width: 40em;
+		margin: 0 auto;
+		padding: 0;
+	}
+    
+    article {
+		margin: 1em;
+		padding: 1em;
+		width: 16em;
+		height: 16em;
+	}
+    
+	article.width2 {
+		width: 16em;
+	}
+    article.width2.pull {
+		width: 36em;
+	}
+    article.width1.pull {
+        width: 36em;
+        height: 36em;
+    }
+    article.width3 {
+		width: 36em;
+	}
+    fieldset {
+		width: 36em;
+	}
+    
+    article.calendar {
+        width:38em;
+    }
+    
+    h1.extra-pad {
+        display:block;
+        font-size:2.5em;
+    }
+    
+    article.tablet {
+        display:inline;
+    }
+    
+    article.img {
+        padding:1em;
+        margin:1em;
+        margin-left:11em;
+        display:none;
+    }
+}
+@media (max-width: 39em) {
+	div#content {
+		max-width: 20em;
+		margin: 0 auto;
+		padding: 0;
+	}
+    
+    article {
+		margin-left: 0.5em;
+		margin-right: auto;
+		padding: 0;
+		width: 19em;
+		height: auto;
+    }
+
+    fieldset {
+		width: 100%;
+	}
+	
+
+    article.extra-pad p{
+        margin:1em;
+    }
+    
+
+    article.extra-pad h1 {
+        display:block;
+    }
+    
+    article.calendar {
+        width: 19em;
+    }
+    
+    h1.extra-pad {
+        display:block;
+        font-size:1.5em;
+    }
+    
+    article.unrestricted p {
+        display:block;
+        font-size:1em;
+    }
+    
+    article p.large{
+        display:none;
+    }
+    
+    
+    
+    article.width3 p{
+        font-size:1em;
+    }
+    
+    article.logo  {
+        display:none;
+    }
+    
+    article.tablet {
+        display:none;
+    }
+    
+    article.img {
+        display:none;
+    }
+    
+    nav {
+        max-width:auto;
+    }
+}
+
+div#content {
+    background-color:white;
+}
+
+article p {
+        padding:0;
+        margin-left:0;
+        margin-right:0;
+    }
+
+article a {
+    color:white;
+    font-weight:bold;
+}
+article a:hover {
+    color:#aaa;
+    font-weight:bold;
+}
+
+nav {
+	margin: none;
+    background-color:@navcolor; /* NAV BACKGROUND COLOR */
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-right: 1em;
+    margin-bottom:1em;
+}
+
+nav a {
+    font-family:Arial;
+}
+
+nav ul {
+	list-style: none;
+	float: right;
+    margin:0;
+}
+
+nav li {
+  display: inline;
+}
+
+nav i {
+    color: @icon; /* ICON COLOR */
+}
+
+nav li > a {
+  padding: 2px;
+}
+
+a#bg {
+	font-weight: 700;
+	text-decoration: none;
+    margin:1em;
+}
+a#bg span.logo-green {
+	color: @logo1; /* LOGO COLOR 1 */
+}
+a#bg span.logo-purple {
+	color: @logo2; /* LOGO COLOR 2 */
+}
+
+article {
+	text-align: left;
+	float: left;
+    text-decoration: none;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+article h1 {
+    text-align: left;
+}
+
+article.unrestricted {
+    height:auto;
+    padding-bottom:0;
+    margin-bottom:0;
+}
+
+article h2 {
+    color:inherit;
+    font-size:1.5em;
+    padding-top:0;
+    margin-top:0;
+}
+
+
+
+.btn {
+  background: #4B0DA1; /* BUTTON COLOR */
+  background-image: -webkit-linear-gradient(top, #7B48C3, #4B0DA1);
+  background-image: -moz-linear-gradient(top, #7B48C3, #4B0DA1);
+  background-image: -ms-linear-gradient(top, #7B48C3, #4B0DA1);
+  background-image: -o-linear-gradient(top, #7B48C3, #4B0DA1);
+  background-image: linear-gradient(to bottom, #7B48C3, #4B0DA1);
+  -webkit-border-radius: 5;
+  -moz-border-radius: 5;
+  border-radius: 5px;
+  font-family: "Roboto", Arial;
+  color: white;
+  font-size: 1em;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #7B48C3; /*BUTTON HOVER COLOR*/
+  background-image: -webkit-linear-gradient(top, #996FD5, #7B48C3);
+  background-image: -moz-linear-gradient(top, #996FD5, #7B48C3);
+  background-image: -ms-linear-gradient(top, #996FD5, #7B48C3);
+  background-image: -o-linear-gradient(top, #BF87B4, #7B48C3);
+  background-image: linear-gradient(to bottom, #996FD5, #7B48C3);
+  text-decoration: none;
+}
+
+article p {
+    font-size:1.2em;
+}
+
+article p.large {
+    font-size:1.5em
+}
+
+article.left h2 {
+	text-align: left;
+}
+
+article.left p {
+	text-align: left;
+}
+
+article.blue {
+    background-color: @artlink; /* ARTICLE LINK COLOR */
+    color:white;
+}
+
+article.link {
+    background-color:@artlink; /* ARTICLE LINK COLOR */
+    color:white;
+}
+
+article.link:hover {
+    background-color:@arthover; /* ARTICLE HOVER COLOR */
+}
+
+article.logo {
+    background-color: purple;
+    border-radius:15px;
+    font-family:Arial;
+}
+
+article.logo h1 {
+    color: black;
+    text-align:center;
+    margin-left: 0.5em;
+    margin-top:0.7em;
+    margin-bottom:auto;
+    font-size: 6em;
+    font-weight: 900;
+}
+
+article.quote {
+
+}
+
+article.quote h2 {
+    font-size:2.5em;
+}
+
+h1.logo {
+    
+}
+
+div#main {
+	float: left;
+	background-color: white;
+}
+
+div#extras {
+	float: left;
+	background-color: white;
+}
+
+div.white {
+    float: left;
+    color: @stripe1; /* STRIPE COLOR 1 */
+    /*background-color: #D9CFE8; /* STRIPE COLOR 1 */
+}
+
+div.grey {
+    float: left;
+    color: @stripe2; /* STRIPE COLOR 2 */
+    /*background-color: #B29FCC; /* STRIPE COLOR 2 */
+}
+
+div.blue {
+    float: left;
+    background-color: none; /* SAME AS BACKGROUND COLOR */
+}
+
+
+
+article.para {
+    height:auto;
+}
+
+article.para p {
+    font-size:1.5em;
+}
+
+article.nopadding {
+    margin-bottom:0;
+}
+
+article.heading {
+    margin-top:0;
+    margin-bottom:0;
+}
+
+article.debug {
+    background-color:#7D83B0;
+    color:black;
+    padding:1em;
+}
+
+article.debug a {
+    color:black;
+}
+
+article.debug p {
+    margin:0;
+    padding:0;
+    text-align:center;
+    width:100%;
+}
+
+article.short {
+    height:8em;
+}
+
+article.footer {
+    margin-top:0;
+    padding-top:0;
+    padding-bottom:0;
+}
+
+article.header {
+    margin-bottom:0;
+    height: auto;
+}
+
+.collapsible {
+    background-color: black;
+}
+
+.colContent {
+    background-color: none;
+}
+
+.collapsible div.collapse-open {}
+.collapsible div.collapse-close {}
+.collapsible div.collapse-open span {}
+.collapsible div.collapse-close span {}
+
+.align-center {
+    text-align:center;
+}
+.align-right {
+    text-align:right;
+    margin-right:0.2em;
+}
+
+
+p.extra-pad {
+    padding-left:2em;
+    padding-right:2em;
+}
+
+
+h1.extra-pad {
+    margin:0.5em 0;
+    padding:0;
+    text-align:center;
+}
+
+article.calendar {
+    overflow-x:auto;
+    -webkit-overflow-scrolling: touch;
+    overflow-y:visible;
+    white-space: nowrap;
+    padding:0;
+    height: auto;
+}
+
+a.month {
+    display: inline;
+    font-size:1.5em;
+}
+
+table {
+    padding:0;
+    margin:0;
+}
+
+tr.monthnames {
+    font-size:1.5em;
+}
+
+td {
+    background-color:@artlink;
+    color:@brightfont;
+    padding-left:10px;
+    padding-right:10px;
+    text-align:center;
+    height:2em;
+}
+
+td.booked {
+    background-color:@darkback;
+    color:#555;
+}
+
+td.title {
+    height:1.5em;
+}
+
+td.block {
+	height:5em;
+}
+
+td.client {
+	height:5em;
+}
+
+td.client:hover {
+	height:5em;
+	background-color:@darkhov;
+}
+
+#foot {
+	display:inline;
+	text-align:center;
+	vertical-align: middle;
+	padding-top: 10em;
+	padding-bottom: 10em;
+	background-color: #222;
+	height:auto;
+	color:white;
+}

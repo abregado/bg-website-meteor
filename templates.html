@@ -1,0 +1,133 @@
+<template name="calendar">
+	<article id="calendar" class='calendar'>
+		<div class="mCustomScrollbar" data-mcs-theme="inset-2" data-mcs-axis="x">
+		<table>
+			<tr>
+			{{#each pastblocks}}
+				{{> dateblock}}
+			{{/each}}
+			{{#each futureblocks}}
+				{{> dateblock}}
+			{{/each}}
+			</tr>
+			<tr>
+			{{#each pastblocks}}
+				{{> clientblock}}
+			{{/each}}
+			{{#each futureblocks}}
+				{{> monthblock}}
+			{{/each}}
+			</tr>
+		</table>
+		</div>
+	</article>
+
+</template>
+
+<template name="clientblock">
+	<td class="client booked"><a href='{{link}}' target="_blank"><img src='{{img}}' width="100%"></a><br></td>	
+</template>
+
+<template name="monthblock">
+	{{#if isBooked}}
+	<td class="block booked">{{isBookedStr}}</td>	
+	{{else}}
+	<td class="block">{{isBookedStr}}</td>	
+	{{/if}}
+</template>
+
+<template name="dateblock">
+	{{#if isBooked}}
+	<td class="title booked">{{monthYearStr}}</td>	
+	{{else}}
+	<td class="title">{{monthYearStr}}</td>	
+	{{/if}}
+</template>
+
+<template name="blockinfo">
+	<article class='width2'>
+		<h3>Block info</h3>
+		{{> paypalCreditCardForm }}
+	</article>
+
+</template>
+
+<template name="topnav">
+ <nav id="topnav">
+	<li><a href="index.html" id="bg" class="brand"><span class="logo-green">binary</span><span class="logo-purple">gambit</span></a></li>
+	<ul class="nav navbar-nav navbar-right inline">
+		<li><a target="_blank" href="http://www.facebook.com/binarygambit"><i class="fa fa-facebook-square fa-lg"></i></a></li>
+		<li><a target="_blank" href="https://twitter.com/intent/user?screen_name=BinaryGambit"><i class="fa fa-twitter-square fa-lg"></i></a></li>
+		<li><a href="mailto:binarygambit@gmail.com"><i class="fa fa-envelope fa-lg"></i></a></li>
+	</ul>
+</nav>
+</template>
+
+<template name="header_consult">
+<div class="blue">
+	<article class="width3 unrestricted blue" id="expandExplain">
+		<h1 class="extra-pad">Game Prototyping and Consultation</h1>
+		<p class="extra-pad"><strong>Looking to run a crowdfunding campaign but don't have a playable prototype? No time for risky pre-production? Looking for validation that your idea is marketable?  </strong></p>
+		<p class="extra-pad">Have your game prototyped in a few easy steps with Binary Gambit</p>
+	<br>
+	<br>
+	</article>
+</div>
+</template>
+
+<template name="content_consult">
+<div class="grey">
+	<article class="width1 img" style="background-image: url('coma2.png');"></article>  
+	<article class="width2 pull unrestricted">
+		<h1>What is a Gameplay Prototype?</h1>
+		<p class="large">Gameplay Prototypes are a way of proving your idea quickly and cheaply.</p>
+		<p>It can be hard to explain your vision to others. Binary Gambit can assits you in highlighting the important parts. </p>
+		<p>Prototypes will <strong>save time and money</strong> by interactivly demonstrating your idea.</p>
+	</article>
+</div>
+
+<div class="white">
+	<article class="width2 pull unrestricted">
+		<h1>1: Send us your Concept</h1>
+		<p class="large">Professional Game Designers use what is called a High Level Concept to pitch their idea.</p>
+		<p>The HLC submission ensures we are on the same page when first discussing your prototype. Don't worry its easy, just email us and we can explain everything. </p>
+		<p>Your ideas are protected through a Non-Disclosure Agreement when dealing with Binary Gambit</p>
+	</article>
+	<article class="width1 img" style="background-image: url('letter-bomb2.png');"></article>    
+</div>
+
+<div class="grey">
+	<article class="width1 img" style="background-image: url('shaking-hands2.png');"></article>    
+	<article class="width2 pull unrestricted">
+		<h1>2: Chat with Us</h1>
+		<p class="large">Success comes from good communication. Your first consultation paves the way to a great Prototype.</p>
+		<p>Together we will choose the components of your game that need to be prototyped, as well as discussing timeframe and cost. Booking a consultation is free and easy! Just email us with your prefered time.</p>		
+	</article>
+</div>
+
+<div class="white">
+	<article class="width2 pull unrestricted">
+		<h1>3: Choose your Development Slot</h1>
+		<p class="large">Its your Dream, make it happen! Binary Gambit only accepts a limited number of contracts per year, so book yours quickly.</p>
+		<p>Choosing when to have your prototype developed is entirely up to you and your budget. Our Development slots are very competativly priced and our availablity can be see on the calendar above.</p>
+	</article>
+	<article class="width1 img" style="background-image: url('calendar2.png');"></article>    
+</div>
+
+<div class="grey">
+	<article class="width1 img" style="background-image: url('jigsaw-box.png');"></article>
+	<article class="width2 pull unrestricted">
+		<h1>4: Receive your Prototype</h1>
+		<p class="large">Where you go from here is up to you, but we will be here to help. Your prototype package includes:</p>
+		<p class="large"> 
+			<ul>
+				<li>Prototype Executable</li>
+				<li>Documentation and Tutorial</li>
+				<li>Studio Recommendation</li>
+				<li>Gameplay Suggestion Report</li>
+				<li>Crowdfunding Assistance</li>
+			</ul>
+		</p>
+	</article>	
+</div>
+</template>
