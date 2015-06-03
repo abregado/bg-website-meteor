@@ -10,3 +10,5 @@ mrt:paypal
 jquery
 maazalik:malihu-jquery-custom-scrollbar
 less
+iron:router
+anti:modals

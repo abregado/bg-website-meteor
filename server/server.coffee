@@ -20,3 +20,17 @@ Devblocks.insert({client: 0,date: new Date(2016,4,1)})
 Devblocks.insert({client: 0,date: new Date(2016,5,1)})
 Devblocks.insert({client: 0,date: new Date(2016,6,1)})
 Devblocks.insert({client: 0,date: new Date(2016,7,1)})
+
+Consults.remove({})
+Consults.insert({time: new Date(2015,6,1)});
+Consults.insert({time: new Date(2015,6,2)});
+Consults.insert({time: new Date(2015,6,3)});
+Consults.insert({time: new Date(2015,6,4)});
+Consults.insert({time: new Date(2015,6,5)});
+Consults.insert({time: new Date(2015,6,6)});
+Consults.insert({time: new Date(2015,6,7)});
+Consults.insert({time: new Date(2015,6,8)});
+Consults.insert({time: new Date(2015,6,9)});
+Consults.insert({time: new Date(2015,6,10)});
+Consults.insert({time: new Date(2015,6,11)});
+

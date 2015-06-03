@@ -1,0 +1,60 @@
+<template name="blockDataModal">
+<div class="anti-modal-box">
+	<div class="anti-modal-body">
+		<h3>Sorry! Its booked!</h3>
+		<p>This Development Block has been booked by a client who wishes to remain anonymous.</p>
+		<p>If your request is urgent, please contact Binary Gambit directly to discuss a solution. Otherwise check the calendar to select a different month.</p>
+		<button>Email Us</button>
+	</div>
+</div>
+</template>
+
+<template name="dateDataModal">
+<div class="anti-modal-box">
+	<div class="anti-modal-body">
+		<form>
+		<h3>Book a Consultation</h3>
+		<p>Enter the relevant information to book a consultation with Binary Gambit</p>
+		Your name: <input type='text' name='clientname'><br>
+		Your email: <input type='text' name='clientemail'><br>
+		Your pitch reference: <input type='text' name='pitchref'><br>
+		<p>Contact Method: <br>
+		Skype <input type='radio' name='contact'><br>
+		Hangouts <input type='radio' name='contact'><br>
+		Other <input type='radio' name='contact'><br>
+		</p>
+		<select id='consultselect'>
+			{{#each futureconsults}}
+			<option>{{time}}</option>
+			{{/each}}
+		</select>
+		</form>
+
+	</div>
+</div>
+</template>
+
+<template name="pitchDataModal">
+<div class="anti-modal-box">
+	<div class="anti-modal-body">
+		<form>
+		<h3>Send us your Pitch</h3>
+		<p>Enter the relevant information to book a consultation with Binary Gambit</p>
+		Your name: <input type='text' name='clientname'><br>
+		Your email: <input type='text' name='clientemail'><br>
+		Your pitch reference: <input type='text' name='pitchref'><br>
+		<p>Contact Method: <br>
+		Skype <input type='radio' name='contact'><br>
+		Hangouts <input type='radio' name='contact'><br>
+		Other <input type='radio' name='contact'><br>
+		</p>
+		<select id='consultselect'>
+			{{#each futureconsults}}
+			<option>{{time}}</option>
+			{{/each}}
+		</select>
+		</form>
+
+	</div>
+</div>
+</template>
