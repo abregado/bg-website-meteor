@@ -1,12 +1,11 @@
 <template name='Home'>
 <div id='content'>
 	{{> header_consult}}
-	{{> tabmenu}}
 </div>
 </template>
 
 <template name='Clients'>
-
+{{> topnav}}
 <div id='content'>
 	{{> tabmenu}}
 	{{> projectmenu}}
@@ -17,6 +16,7 @@
 </template>
 
 <template name='About'>
+{{> topnav}}
 <div id='content'>
 	{{> tabmenu}}
 	{{> content_consult}}
@@ -25,7 +25,27 @@
 {{> footer}}
 </template>
 
+<template name='Everything'>
+{{> topnavfocus}}
+<div id='content'>
+	{{> header2}}
+	{{> content_proto}}
+	{{> content_send}}
+	{{> content_chat}}
+	{{> content_devslot}}
+	{{> priceinfo}}
+	{{> availability}}
+	{{> booking}}
+</div>
+<div class="centered2">
+	{{> hlcform}}
+	{{> bookconsult}}
+</div>
+{{> footer}}
+</template>
+
 <template name='Pricing'>
+{{> topnav}}
 <div id='content'>
 	{{> tabmenu}}
 	{{> calendar}}
@@ -35,13 +55,15 @@
 {{> footer}}
 </template>
 
-<template name='Bookit'>
+<template name='Bookiteasy'>
+{{> topnav}}
 <div id='content'>
 	{{> tabmenu}}
 </div>
 
-<div class='centered'>
+<div class='centered2'>
 	{{> hlcform}}
+	{{> bookconsult}}
 </div>
 	
 {{> footer}}

@@ -24,3 +24,7 @@ Template.blockDataModal.helpers {
 Template.dateDataModal.helpers {
 	futureconsults: -> Consults.find({time: {$gt: now}})
 }
+
+Template.bookconsult.helpers {
+	futureconsults: -> Consults.find({time: {$gt: now}})
+}

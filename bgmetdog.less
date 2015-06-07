@@ -12,6 +12,7 @@
 @arthover:#390A7C;
 @stripe1: #D9CFE8;
 @brightfont:white;
+@lightgrey:#666;
 
 html,body {
     background-color:@backcolor; /* BACKGROUND COLOR */
@@ -50,7 +51,7 @@ html,body {
     }
     
 	fieldset {
-		width: 56em;
+		width: 36em;
 		margin: 0.5em;
 		padding: 1em;
 	}
@@ -70,12 +71,19 @@ html,body {
     margin-top:1em;
 	}
     
-    div.centered {
-	width:58em;
+    div.centered2 {
+	width:38em;
 	margin-left: auto;
 	margin-right: auto;
 	}
     
+    .primary-nav a {
+		font-size:1em;
+    }
+    
+    table.option td {
+		font-size:1em;
+    }
 
 }
 @media (min-width: 40em) and (max-width: 59em) {
@@ -135,11 +143,19 @@ html,body {
         display:none;
     }
     
-    div.centered {
+    div.centered2 {
 	width:38em;
 	margin-left: auto;
 	margin-right: auto;
 	}
+	
+	.primary-nav a {
+		font-size:1em;
+    }
+    
+    table.option td {
+		font-size:1em;
+    }
 }
 @media (max-width: 39em) {
 	div#content {
@@ -173,7 +189,7 @@ html,body {
     }
     
     article.calendar {
-        width: 19em;
+        width: 100%;
     }
     
     h1.extra-pad {
@@ -216,11 +232,19 @@ html,body {
         max-width:auto;
     }
     
-    div.centered {
+    div.centered2 {
 	width:100%;
 	margin-left: auto;
 	margin-right: auto;
 	}
+	
+	.primary-nav a {
+		font-size:0.8em;
+    }
+    
+    table.option td {
+		font-size:0.8em;
+    }
 }
 
 div#content {
@@ -259,6 +283,19 @@ nav {
     padding-bottom: 1em;
     padding-right: 1em;
     margin-bottom:1em;
+}
+
+nav.fixed {
+	position:fixed;
+	top:0;
+	left:0;
+	z-index:6500;
+	width:100%;
+}
+
+article.navbuffer {
+	height:1em;
+	margin-bottom:3em;
 }
 
 nav a {
@@ -958,16 +995,40 @@ div.col-right span:last-of-type input ~ label {
         }
 
 
-
-
-
-
-
-
-
-
-
-
+article.lander {
+	background-color: @lightgrey; /* ARTICLE LINK COLOR */
+    color:black;
+    padding:0px;
+    border-radius: 15px;
+    
+    *:last-child {
+		margin-bottom:15px;
+    }
+    
+    ul {
+		border-top: 1px solid black;
+    }
+    
+    p {
+		color:@brightfont;
+    }
+    
+    .logo-green {
+		color:white;
+    }
+    
+    .logo-purple {
+		color:@logo2;
+    }
+    
+    li {
+		background-color: @stripe1;
+    }
+    
+    li:hover {
+		background-color: @stripe2;
+    }
+}
 
 
 

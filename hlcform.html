@@ -1,3 +1,41 @@
+<template name='packselect'>
+	
+</template>
+
+<template name='bookconsult'>
+<form>
+	<fieldset>
+	<legend><h2>Initial Consultation</h2></legend>
+	<p>Enter the relevant information to book a the inital consultation with Binary Gambit. These consultations are completly free.</p>
+
+	<p><h3>Contact Method:</h3>
+	<span>
+	<input id="skype" name="contact" type="radio" value="skype" >
+	<label for="skype" class='top'>I would like to be contacted by Skype.</label>
+	</span>
+	
+	<span>
+	<input id="hangouts" name="contact" type="radio" value="hangouts" >
+	<label for="hangouts" class='bottom'>I would like to be contacted through Google Hangouts.</label>
+	</span>
+	</p>
+	<p>
+	<h3>My username or email (if different from main contact):</h3>
+	<input id ="chatusername" type="text" name="chatusername">
+	</p>
+	
+	<p>
+	<h3>My preferred time:</h3>
+	<select id='consultselect'>
+		{{#each futureconsults}}
+		<option>{{time}}</option>
+		{{/each}}
+	</select>
+	</p>
+	</fieldset>
+</form>
+</template>
+
 <template name='hlcform'>
             
     <form id="hlcForm">
@@ -33,7 +71,7 @@
     
     <fieldset>
         <legend><h2>Pitch it!</h2></legend>
-        <p>Before you start, try to explain your entire idea is just 10 words or less. Make me want to play it! <a href="https://boardgamegeek.com/geeklist/170693/video-game-taglines-and-slogans" target="_blank"><i class="fa fa-search"> Help</i></a>
+        <p>Before you start, try to explain your entire idea in just 10 words or less. Make me want to play it! <a href="https://boardgamegeek.com/geeklist/170693/video-game-taglines-and-slogans" target="_blank"><i class="fa fa-search"> Help</i></a>
          <label for="slogan" class="error"></label></p>
         <input id ="slogan" type="text" name="slogan">
     </fieldset>
@@ -57,7 +95,7 @@
     
     </form>
     
-    <article class='unrestricted'>
+    <!--<article class='unrestricted'>
 		
     <button class='btn' id='prevhlc'> <i class='fa fa-arrow-left fa-lg'></i> </button>
     <button class='btn' id='savehlc'> <i class='fa fa-save fa-lg'></i> </button>
@@ -87,7 +125,7 @@
 	</table>
     
     <button class='btn' disabled>Submit</button>
-    </article>
+    </article>-->
     
     
 </template>

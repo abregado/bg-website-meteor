@@ -1,13 +1,25 @@
 <template name="tabmenu">
 	<article class='width3 unrestricted topstack'>
-	
+		{{> tabs}}
+	</article>
+</template>
+
+<template name='tabs'>
 	<ul class='tabs primary-nav'>
 		<li><a href='/about'>About</a></li>
 		<li><a href='/pricing'>Pricing and Availablilty</a></li>
 		<li><a href='/clients'>Examples</a></li>
-		<li><a href='/bookit'>Lets Do It!</a></li>
+		<li><a href='/bookiteasy'>Lets Do It!</a></li>
 	</ul>
+</template>
+
+<template name="availability">
+	<article id="avail" class='navbuffer width3'></article>
+	<article class="width3 unrestricted">
+		<h1>When can I have my Prototype developed?</h1>
+		<p>The calendar below slows in which months Binary Gambit is already booked. If the slot you would like has already been booked, please contact us directly. We may be able to help you.</p>
 	</article>
+		{{> calendar}}
 </template>
 
 <template name="calendar">
@@ -29,9 +41,6 @@
 		</table>
 		</div>
 	</article>
-	<div id='priceaccord'>
-	{{> priceinfo}}
-	</div>
 </template>
 
 <template name="clientblock">
@@ -62,10 +71,37 @@
 
 </template>
 
+<template name="booking">
+<article id="booking" class='navbuffer width3'></article>
+<article class="width3 unrestricted">
+		<h1>Ready to get started?</h1>
+		<p>This form can be used to attach a basic NDA to your concept and to arrange a free consultation. If you would like to purchase the COMPLETE package listed above, please send us your NDA via email.</p>
+	</article>
+</template>
+
 <template name="topnav">
  <nav id="topnav">
 	<li><a href="/" id="bg" class="brand"><span class="logo-green">binary</span><span class="logo-purple">gambit</span></a></li>
-	<li><a href="/clients" >Previous Clients</a></li>
+	<li><a href="/about" >About</a></li>
+	<li><a href="/pricing" >Pricing</a></li>
+	<li><a href="/clients" >Examples</a></li>
+	<li><a href="/bookit" >Lets Do It!</a></li>
+	<ul class="nav navbar-nav navbar-right inline">
+		<li><a target="_blank" href="http://www.facebook.com/binarygambit"><i class="fa fa-facebook-square fa-lg"></i></a></li>
+		<li><a target="_blank" href="https://twitter.com/intent/user?screen_name=BinaryGambit"><i class="fa fa-twitter-square fa-lg"></i></a></li>
+		<li><a href="mailto:binarygambit@gmail.com"><i class="fa fa-envelope fa-lg"></i></a></li>
+	</ul>
+</nav>
+</template>
+
+<template name="topnavfocus">
+ <nav id="topnav" class='fixed'>
+	<li><a href="/" id="bg" class="brand"><span class="logo-green">binary</span><span class="logo-purple">gambit</span></a></li>
+	<li><a href="#about" >About</a></li>
+	<li><a href="#pricing" >Pricing</a></li>
+	<li><a href="#avail" >Availability</a></li>
+	<li><a href="/clients" >Examples</a></li>
+	<li><a href="#booking" >Lets Do It!</a></li>
 	<ul class="nav navbar-nav navbar-right inline">
 		<li><a target="_blank" href="http://www.facebook.com/binarygambit"><i class="fa fa-facebook-square fa-lg"></i></a></li>
 		<li><a target="_blank" href="https://twitter.com/intent/user?screen_name=BinaryGambit"><i class="fa fa-twitter-square fa-lg"></i></a></li>
@@ -76,6 +112,23 @@
 
 <template name="header_consult">
 <div class="blue">
+	
+	<article class="width3 unrestricted lander" id="expandExplain">
+		<h1 class="extra-pad"><span class="logo-green">binary</span><span class="logo-purple">gambit</span></h1>
+		<h1 class="extra-pad">Game Prototyping and Consultation</h1>
+		<p class="extra-pad"><strong>Looking to run a crowdfunding campaign but don't have a playable prototype? No time for risky pre-production? Looking for validation that your idea is marketable?  </strong></p>
+		<p class="extra-pad">Have your game prototyped in a few easy steps with Binary Gambit</p>
+	<br>
+	<br>
+	
+	{{> tabs}}
+	</article>
+</div>
+</template>
+
+<template name="header2">
+<div class="blue">
+	<article class='navbuffer width3'></article>
 	<article class="width3 unrestricted blue" id="expandExplain">
 		<h1 class="extra-pad">Game Prototyping and Consultation</h1>
 		<p class="extra-pad"><strong>Looking to run a crowdfunding campaign but don't have a playable prototype? No time for risky pre-production? Looking for validation that your idea is marketable?  </strong></p>
@@ -87,7 +140,9 @@
 </template>
 
 <template name="content_proto">
+
 <div class='row'>
+	<article class='navbuffer width3' id='about'></article>
 	<article id='face' class="width1 img" style="background-image: url('coma2.png');"></article>  
 	<article class="width2 pull unrestricted">
 		<h1>What is a Gameplay Prototype?</h1>
@@ -166,9 +221,10 @@
 </template>
 
 <template name='priceinfo'>
-<article class='width2 unrestricted stripepanel'>
-<h3>What does a Prototype cost?</h3>
-		<p>Binary Gambit gives you the option</p>
+<article id="pricing" class='navbuffer width3'></article>
+<article class='width2 unrestricted stripepanel pull'>
+<h3>What does a Prototype cost and what do I get?</h3>
+		
 		<table class='option'>
 		<tr class='allbold'>
 			<td> </td>
