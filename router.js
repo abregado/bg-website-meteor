@@ -5,3 +5,6 @@ Router.route('/', function () {
 
 // when you navigate to "/one" automatically render the template named "One".
 Router.route('/clients');
+Router.route('/about');
+Router.route('/pricing');
+Router.route('/bookit');

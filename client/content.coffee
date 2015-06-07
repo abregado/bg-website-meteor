@@ -3,8 +3,6 @@ root = exports ? this
 Template.content_consult.helpers {}
 
 Template.content_consult.events {
-	'click #book': (e,t) -> (
-		AntiModals.overlay('dateDataModal')),
 	'mouseenter #face': (e,t) -> (
 		$('#face').css({'background-image': 'url(coma3.png)'})),
 	'mouseleave #face': (e,t) -> (
@@ -21,5 +19,6 @@ Template.content_consult.events {
 		$('#letter').css({'background-image': 'url(letter-bomb3.png)'})),
 	'mouseleave #letter': (e,t) -> (
 		$('#letter').css({'background-image': 'url(letter-bomb2.png)'})),
-		
 }
+
+Template.hlcform.events {}

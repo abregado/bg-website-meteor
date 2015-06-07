@@ -1,18 +1,48 @@
 <template name='Home'>
-{{> topnav}}
 <div id='content'>
 	{{> header_consult}}
-	{{> calendar}}
-	{{> content_consult}}
-	{{> footer}}
+	{{> tabmenu}}
 </div>
 </template>
 
 <template name='Clients'>
-{{> topnav}}
+
 <div id='content'>
+	{{> tabmenu}}
 	{{> projectmenu}}
 	{{> project}}
-	{{> footer}}
 </div>
+
+	{{> footer}}
+</template>
+
+<template name='About'>
+<div id='content'>
+	{{> tabmenu}}
+	{{> content_consult}}
+	
+</div>
+{{> footer}}
+</template>
+
+<template name='Pricing'>
+<div id='content'>
+	{{> tabmenu}}
+	{{> calendar}}
+	{{> priceinfo}}
+	
+</div>
+{{> footer}}
+</template>
+
+<template name='Bookit'>
+<div id='content'>
+	{{> tabmenu}}
+</div>
+
+<div class='centered'>
+	{{> hlcform}}
+</div>
+	
+{{> footer}}
 </template>

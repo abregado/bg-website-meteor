@@ -13,7 +13,7 @@ helptexts = {
 	rownda:"<h3>How am I protected from thieving trolls?</h3><p>All projects undertaken by Binary Gambit can be protected under an NDA, just check the appropriate box when sending us your concept.</p><p>If you have special legal requirements, or a custom NDA, its not a problem. Simply select the COMPLETE option.</p>",
 	rowcontract:"<h3>What about Legals?</h3><p>Binary Gambit prefers to use the generic work contracts provided by doContract. Put simply, you pay us and we do the work.</p><p>If you have special legal needs please select the COMPLETE option and let us know in detail what those needs are.</p> ",
 	rowpayment:"<h3>When and how do I pay?</h3><p>To keep things simple, and to keep costs down, Binary Gambit accepts payment upfront using Paypal for all EASY option contracts.</p><p>COMPLETE option contracts pay half now, half on delivery.</p>",
-	rowprice:"<h3>Why is the Easy option so cheap?</h3><p>Due to very small team size, Binary Gambit can produce Prototypes and offer their other services for an incredibly competative price. This also means that expensive overheads such as Legal or Accounting fees can quickly overwhelm the cost of production.</p><p>By selecting 'Cheap and Easy' you are making our work much easier, and so the savings are passed onto you.</p>"
+	rowprice:"<h3>Why is the Easy option so cheap?</h3><p>Due to very small team size, Binary Gambit can produce Prototypes and offer their other services for an incredibly competative price. This also means that expensive overheads such as Legal or Accounting fees can quickly overwhelm the cost of production.</p><p>By selecting 'Easy' you are making our work much easier, and so the savings are passed onto you.</p>"
 }
 	
 
@@ -23,5 +23,5 @@ Template.priceinfo.events {
 	'mouseenter tr': (e,t) -> 
 		title = $(e.currentTarget).attr('title')
 		console.log(title)
-		$('#helptext').html(helptexts[title] or helptexts['rowprice'])
+		$('.helptext').html(helptexts[title] or helptexts['rowprice'])
 }

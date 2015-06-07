@@ -1,3 +1,15 @@
+<template name="tabmenu">
+	<article class='width3 unrestricted topstack'>
+	
+	<ul class='tabs primary-nav'>
+		<li><a href='/about'>About</a></li>
+		<li><a href='/pricing'>Pricing and Availablilty</a></li>
+		<li><a href='/clients'>Examples</a></li>
+		<li><a href='/bookit'>Lets Do It!</a></li>
+	</ul>
+	</article>
+</template>
+
 <template name="calendar">
 	<article id="calendar" class='calendar'>
 		<div class="mCustomScrollbar" data-mcs-theme="inset-2" data-mcs-axis="x">
@@ -74,7 +86,7 @@
 </div>
 </template>
 
-<template name="content_consult">
+<template name="content_proto">
 <div class='row'>
 	<article id='face' class="width1 img" style="background-image: url('coma2.png');"></article>  
 	<article class="width2 pull unrestricted">
@@ -84,27 +96,32 @@
 		<p>Prototypes will <strong>save time and money</strong> by interactivly demonstrating your idea.</p>
 	</article>
 </div>
+</template>
 
+<template name="content_send">
 <div class='row'>
 	<article class="width2 pull unrestricted">
 		<h1>1: Send us your Concept</h1>
 		<p class="large">Professional Game Designers use what is called a High Level Concept to pitch their idea.</p>
-		<p>The HLC submission ensures we are on the same page when first discussing your prototype. Don't worry its easy, just email us and we can explain everything. </p>
+		<p>The HLC submission ensures we are on the same page when first discussing your prototype. Don't worry its easy, there are only a few fields to fill out </p>
 		<p>Your ideas are protected through a Non-Disclosure Agreement when dealing with Binary Gambit</p>
 	</article>
 	<article id='letter' class="width1 img" style="background-image: url('letter-bomb2.png');"></article>    
 </div>
+</template>
 
+<template name="content_chat">
 <div class='row'>
 	<article class="width1 img" style="background-image: url('shaking-hands2.png');"></article>    
 	<article class="width2 pull unrestricted">
 		<h1>2: Chat with Us</h1>
 		<p class="large">Success comes from good communication. Your first consultation paves the way to a great Prototype.</p>
 		<p>Together we will choose the components of your game that need to be prototyped, as well as discussing timeframe and cost. Booking a consultation is free and easy! Just email us with your prefered time.</p>		
-		<p><button id='book'>Make a Booking</button></p>
 	</article>
 </div>
+</template>
 
+<template name="content_devslot">
 <div class='row'>
 	<article class="width2 pull unrestricted">
 		<h1>3: Choose your Development Slot</h1>
@@ -113,7 +130,9 @@
 	</article>
 	<article class="width1 img" id='cal' style="background-image: url('calendar2.png');"></article>    
 </div>
+</template>
 
+<template name="content_receive">
 <div class='row'>
 	<article id='box' class="width1 img" style="background-image: url('jigsaw-box.png');"></article>
 	<article class="width2 pull unrestricted">
@@ -131,8 +150,16 @@
 </div>
 </template>
 
+<template name="content_consult">
+{{> content_proto}}
+{{> content_send}}
+{{> content_chat}}
+{{> content_devslot}}
+{{> content_receive}}
+</template>
+
 <template name='footer'>
-<article id="foot" class="width3">
+<article id="foot" class="width3" style='padding:0;margin:0;width:100%;margin-top:10em;padding:1em;'>
 		<h4>Copyright 2015: binarygambit</h4>
 		<p>created using MeteorJS</p>
 </article>	
@@ -140,8 +167,8 @@
 
 <template name='priceinfo'>
 <article class='width2 unrestricted stripepanel'>
-<h3>Available Development Block Info</h3>
-		<p>This development slot is available. You can review your booking options and make a choice below.</p>
+<h3>What does a Prototype cost?</h3>
+		<p>Binary Gambit gives you the option</p>
 		<table class='option'>
 		<tr class='allbold'>
 			<td> </td>
@@ -196,7 +223,7 @@
 		<tr title='rownda'>
 			<td>NDA Protection</td>
 			<td>I provide</td>
-			<td>You Provide</td>
+			<td>You provide</td>
 		</tr>
 		<tr title='rowcontract'>
 			<td>Work Contract</td>
@@ -213,17 +240,22 @@
 			<td>3,000$AU</td>
 			<td>10,000$AU</td>
 		</tr>
-		<tr>
+		<!--<tr>
 			<td></td>
 			<td class='button'><button class='btn'>Get Started</button></td>
 			<td class='button'><button class='btn'>Get Started</button></td>
-		</tr>
+		</tr>-->
 	</table>
 	<p> </p>
 </article>
-<article id='helptext' class='unrestricted stripepanel desktop'>
+<article id='helptext' class='helptext unrestricted stripepanel desktop'>
 	<h3>Why is the Easy option so cheap?</h3>
 	<p>Due to very small team size, Binary Gambit can produce Prototypes and offer their other services for an incredibly competative price. This also means that expensive overheads such as Legal or Accounting fees can quickly overwhelm the cost of production.</p>
-	<p>By selecting 'Cheap and Easy' you are making our work much easier, and so the savings are passed onto you.</p>
+	<p>By selecting 'Easy' you are making our work much easier, and so the savings are passed onto you.</p>
 </article>
+</template>
+
+<template name="bookconsult">
+	
+
 </template>

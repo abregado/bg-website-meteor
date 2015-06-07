@@ -31,7 +31,4 @@ Template.monthblock.events {
 	'click': (e,t) -> 
 		Session.set('selected',this._id)
 		if this.client then AntiModals.overlay('blockDataModal')
-		$('#priceaccord').fadeToggle()
 }
-
-

@@ -1,0 +1,93 @@
+<template name='hlcform'>
+            
+    <form id="hlcForm">
+    
+    <fieldset>
+        <legend><h2>Contact</h2></legend>
+
+        <label for="name">Personal or Company Name</label>
+        <input id ="name" type="text" name="name"><br><br>
+        <label for="email">E-mail address</label>
+        <input id ="email" type="text" name="email"><br>
+        
+        <h3>You, Me and the Lawyermans</h3>
+        <p>Before you start filling in a pitch, it is very important to explain how your ideas are protected.</p>
+        <p>A Non-Disclosure Agreement is a legal agreement in which the recipient of confidental information agrees not to share that information with others parties or use that information. This means that Binary Gambit staff cannot discuss your concept with any parties without your permission, and without the third party also signing an NDA.</p>
+        <p>We use a standard, time limited Unilateral NDA which is pre-signed and attached to the final pitch that you send through this website. The NDA will apply to this document and any discussions we have regarding it for a period of 12 months. By recieving your pitch, Binary Gambit agrees to the NDA.</p> 
+        <p>Be aware that information that has already been made public cannot be held as Confidential, including those made by public by other people.</p>
+        <p>Information entered on this site is saved locally in YOUR browser and is never sent or saved to our servers.</p>
+        <p>If you legally own any Trademarks or are including Copyrighted or Patented content in your concept, please mark it as such.</p>
+        <span>
+        <input id="agree" name="NDAagreement" type="radio" value="agree" >
+        <label for="agree" class='top'>By selecting this box I agree to the NDA and want it attached to my concept when it is sent to Binary Gambit.</label>
+        </span>
+        <span>
+        <input id="disagree" name="NDAagreement" type="radio" value="disagree" >
+        <label for="disagree" class='bottom'>By selecting this box, I declare my concept to be public knowledge and do not want an NDA attached.</label>
+        </span>
+        <label for="NDAagreement" class='error'></label>
+
+    </fieldset>
+     
+    
+    
+    <fieldset>
+        <legend><h2>Pitch it!</h2></legend>
+        <p>Before you start, try to explain your entire idea is just 10 words or less. Make me want to play it! <a href="https://boardgamegeek.com/geeklist/170693/video-game-taglines-and-slogans" target="_blank"><i class="fa fa-search"> Help</i></a>
+         <label for="slogan" class="error"></label></p>
+        <input id ="slogan" type="text" name="slogan">
+    </fieldset>
+    
+    <fieldset>
+        <legend><h2>Main Feature</h2></legend>
+        
+        <p>Explain your main feature in 60 words or less. Be sure to include what makes this feature unique.</p>
+        <label for='mainfeature' class='error'></label>
+        <textarea id="mainfeature" name="mainfeature" value=""></textarea>
+        <p id="mfcount">Here is the word count</p>
+    </fieldset>
+
+    <fieldset>
+        <legend><h2>Gameplay story</h2></legend>
+        <p>Using less than 100 words, tell a story about the players experience during the most exciting part of your game. Remember, this is not about the narrative in your game, but about the player themselves.<label for='gamestory' class='error'></label></p>
+        <textarea id="gamestory" name="gamestory"></textarea>
+        <p id="storycount">Words: 0</p>
+    </fieldset>
+ 
+    
+    </form>
+    
+    <article class='unrestricted'>
+		
+    <button class='btn' id='prevhlc'> <i class='fa fa-arrow-left fa-lg'></i> </button>
+    <button class='btn' id='savehlc'> <i class='fa fa-save fa-lg'></i> </button>
+    <button class='btn' id='nexthlc'> <i class='fa fa-arrow-right fa-lg'></i> </button>
+    
+    <table class='option' width='100%'>
+		<tr title='section1'>
+			<td>Contact</td>
+			<td> <i class='fa fa-check'></i> </td>
+		</tr>
+		<tr title='section1'>
+			<td>Pitch It!</td>
+			<td> <i class='fa fa-check'></i> </td>
+		</tr>
+		<tr title='section1'>
+			<td>Main Feature</td>
+			<td> <i class='fa fa-check'></i> </td>
+		</tr>
+		<tr title='section1'>
+			<td>Gameplay Story</td>
+			<td> <i class='fa fa-check'></i> </td>
+		</tr>
+		<tr title='section1'>
+			<td>Review</td>
+			<td> <i class='fa fa-check'></i> </td>
+		</tr>
+	</table>
+    
+    <button class='btn' disabled>Submit</button>
+    </article>
+    
+    
+</template>

@@ -51,6 +51,8 @@ html,body {
     
 	fieldset {
 		width: 56em;
+		margin: 0.5em;
+		padding: 1em;
 	}
 	article.width2 {
 		width: 36em;
@@ -66,8 +68,15 @@ html,body {
     
     article.img {
     margin-top:1em;
+	}
     
-}
+    div.centered {
+	width:58em;
+	margin-left: auto;
+	margin-right: auto;
+	}
+    
+
 }
 @media (min-width: 40em) and (max-width: 59em) {
 	div#content {
@@ -98,6 +107,8 @@ html,body {
 	}
     fieldset {
 		width: 36em;
+		margin: 0.5em;
+		padding: 1em;
 	}
     
     article.calendar {
@@ -123,24 +134,32 @@ html,body {
         margin-left:11em;
         display:none;
     }
+    
+    div.centered {
+	width:38em;
+	margin-left: auto;
+	margin-right: auto;
+	}
 }
 @media (max-width: 39em) {
 	div#content {
-		max-width: 20em;
-		margin: 0 auto;
+		max-width: 100%;
+		margin: 0;
 		padding: 0;
 	}
     
     article {
-		margin-left: 0.5em;
+		margin-left: 0;
 		margin-right: auto;
 		padding: 0;
-		width: 19em;
+		width: 100%;
 		height: auto;
     }
 
     fieldset {
 		width: 100%;
+		padding:1em;
+		margin:0;
 	}
 	
 
@@ -196,6 +215,12 @@ html,body {
     nav {
         max-width:auto;
     }
+    
+    div.centered {
+	width:100%;
+	margin-left: auto;
+	margin-right: auto;
+	}
 }
 
 div#content {
@@ -220,6 +245,11 @@ article a {
 article a:hover {
     color:#aaa;
     font-weight:bold;
+}
+
+article.topstack {
+	margin-top:0;
+	margin-bottom:0;
 }
 
 nav {
@@ -316,6 +346,10 @@ article h2 {
   background: #7B48C3; /*BUTTON HOVER COLOR*/
 
   text-decoration: none;
+}
+
+.btn:disabled {
+	background-color: @stripe2;
 }
 
 article p {
@@ -544,7 +578,7 @@ table.option {
 	td {
 		border:2px solid @backcolor;
 		text-align:center;
-		padding:10px 0px;
+		padding:10px;
 	}
 	
 	td:nth-child(3) {
@@ -693,3 +727,260 @@ article.projectmenu {
 img.preload {
 	display:none;
 }
+
+fieldset {
+    background-color:#4B0DA1; /* ARTICLE LINK COLOR */
+    color:white;
+    
+	height: auto;
+	text-align: left;
+	float: left;
+    text-decoration: none;
+    border: 1px solid black;
+    
+}
+
+fieldset legend h2{
+    background-color:#1c1c1c; /* ARTICLE LINK COLOR */
+    color:white;
+    padding:5px 20px;
+    border: 1px solid black;
+}
+
+p h3 {
+    display:inline;
+    }
+
+div.col {
+    background-color:#D9CFE8;
+    margin:0;
+    padding:0;
+    border-radius:15px;
+}
+
+div.col-left {
+    float:left;
+    width:50%;
+    margin:0.5em 0;
+}
+
+div.col-right {
+    float:right;
+    width:50%;
+    margin:0.5em 0;
+    
+}
+
+a i{
+    color:white;
+    padding: 6px;
+}
+
+/*LABEL STYLING */
+label.error {
+    margin:0px;
+    display:block;
+    padding:2px;
+    color:Moccasin;
+}
+
+
+/*INPUT STYLING*/
+span input[type="radio"], input[type="checkbox"] {
+    /* hide the inputs*/ 
+    opacity   : 0;
+    float:left;
+}
+
+
+
+/* style your lables/button */
+span input[type="radio"] + label, input[type="checkbox"] + label {
+    display: block;
+    padding: 15px 50px;
+    margin: 0;
+    border: 1px solid #ccc;
+    background-color: #eee;
+    color: #333;
+    cursor: pointer;
+    
+}
+label a i{
+    color:black;
+    font-weight:bold;
+    font-style:italic;
+    clear:both;
+    
+}
+
+span input[type="radio"] + label:hover, input[type="checkbox"] + label:hover {
+    background-color: #B29FCC;
+}
+
+span input[type="radio"]:checked + label, input[type="checkbox"]:checked + label {
+
+    background-color:#6EDD6E;
+    color:black;
+}
+
+label.top {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+label.bottom {
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+textarea
+{
+    display:block;
+	border-bottom:1px solid #ddd;
+	border-left:1px solid #c3c3c3;
+	border-right:1px solid #c3c3c3;
+	border-top:1px solid #7c7c7c;
+	color:#333;
+	font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
+	font-size:1.5em;
+	margin-top:5px;
+	margin-bottom:15px;
+	width:100%;
+    height: 10em;
+    border-radius: 15px;
+}
+
+input.error, select.error, textarea.error {
+    border: 2px solid DarkRed;
+    color:DarkRed;
+    background-color:Moccasin;
+}
+
+
+input[type="text"] {
+    padding: 4px 0;
+    margin: 4px 0;
+    width: 90%;
+    font-size:1.5em;
+    border-radius: 15px;
+    
+}
+
+input[type="radio"] {
+    font-size:2em;
+}
+
+textarea ~ i {
+    padding-left:15px;
+}
+
+
+select {
+    font-size:1.5em;
+    padding:5px;
+    border-radius: 15px;
+}
+
+div.col span:first-of-type input ~ label {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+div.col span:last-of-type input ~ label {
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+div.col-left span:first-of-type input ~ label {
+    border-top-left-radius: 15px;
+}
+div.col-right span:first-of-type input ~ label {
+    border-top-right-radius: 15px;
+}
+div.col-left span:last-of-type input ~ label {
+    border-bottom-left-radius: 15px;
+}
+div.col-right span:last-of-type input ~ label {
+    border-bottom-right-radius: 15px;
+}
+
+
+#priceaccord, #hlcaccord {
+	display:none;
+}
+
+.tabs {
+    margin:  0;
+    padding: 0;
+    list-style: none;
+    display: table; /* [1] */
+    table-layout: fixed; /* [2] */
+    width: 100%; /* [3] */
+	
+	li {
+        display: table-cell; /* [4] */
+        
+		
+		a {
+            display: block; /* [5] */
+            vertical-align: middle;
+        }
+    }
+
+}
+
+    
+
+        
+
+
+/**
+ * Primary nav. Extends `.tabs`.
+ *
+ * 1. Stop tabs’ corners leaking out beyond our 4px round.
+ */
+.primary-nav {
+    text-align: center;
+    border-radius: 4px;
+    overflow: hidden; /* [1] */
+}
+
+        .primary-nav a {
+            padding: 1em;
+            background-color: @artlink;
+            color: #fff;
+            height:2.5em;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .primary-nav a:hover {
+            background-color: @arthover;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
